@@ -112,7 +112,98 @@ tailwind.config = { darkMode: 'class', theme: { extend: {
       <h2 class="text-3xl md:text-5xl font-black">أقسام المعرض</h2>
       <p class="mt-5 text-night-500 dark:text-sand-300/80 leading-relaxed">ستة أقسام متكاملة تغطي احتياجات السكن والتشييد من الألف إلى الياء.</p>
     </div>
-    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-7"><div class="reveal card-hover rounded-3xl border border-gold-500/30 bg-white/80 dark:bg-night-700/70 p-7" data-delay="0"><div class="w-13 h-13 w-12 h-12 rounded-2xl bg-gradient-to-br from-gold-400 to-gold-700 text-night-900 grid place-items-center mb-5"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 20v-8a4 4 0 0 1 4-4h12"/><path d="M4 20h4M16 4v4m4-4v4"/></svg></div><h3 class="text-xl font-extrabold mb-2">السباكة</h3><p class="text-sm leading-relaxed text-night-500 dark:text-sand-300/80">أنابيب وتمديدات، خلاطات، سخانات، وعوازل بأعلى المواصفات.</p></div><div class="reveal card-hover rounded-3xl border border-gold-500/30 bg-white/80 dark:bg-night-700/70 p-7" data-delay="100"><div class="w-13 h-13 w-12 h-12 rounded-2xl bg-gradient-to-br from-gold-400 to-gold-700 text-night-900 grid place-items-center mb-5"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg></div><h3 class="text-xl font-extrabold mb-2">الكهرباء</h3><p class="text-sm leading-relaxed text-night-500 dark:text-sand-300/80">أسلاك وكابلات معتمدة، قواطع، ولوحات توزيع آمنة.</p></div><div class="reveal card-hover rounded-3xl border border-gold-500/30 bg-white/80 dark:bg-night-700/70 p-7" data-delay="200"><div class="w-13 h-13 w-12 h-12 rounded-2xl bg-gradient-to-br from-gold-400 to-gold-700 text-night-900 grid place-items-center mb-5"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18h6m-5 4h4M12 2a7 7 0 0 1 4 12.7c-.6.5-1 1.4-1 2.3h-6c0-.9-.4-1.8-1-2.3A7 7 0 0 1 12 2Z"/></svg></div><h3 class="text-xl font-extrabold mb-2">الإنارة</h3><p class="text-sm leading-relaxed text-night-500 dark:text-sand-300/80">ثريات وسبوتات وإنارة LED داخلية وخارجية موفرة.</p></div><div class="reveal card-hover rounded-3xl border border-gold-500/30 bg-white/80 dark:bg-night-700/70 p-7" data-delay="0"><div class="w-13 h-13 w-12 h-12 rounded-2xl bg-gradient-to-br from-gold-400 to-gold-700 text-night-900 grid place-items-center mb-5"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m14 4 6 6-2 2-6-6 2-2Z"/><path d="M12 6 3 15l3 3 9-9"/></svg></div><h3 class="text-xl font-extrabold mb-2">العدد والأدوات</h3><p class="text-sm leading-relaxed text-night-500 dark:text-sand-300/80">عدة يدوية وكهربائية من ماركات عالمية موثوقة.</p></div><div class="reveal card-hover rounded-3xl border border-gold-500/30 bg-white/80 dark:bg-night-700/70 p-7" data-delay="100"><div class="w-13 h-13 w-12 h-12 rounded-2xl bg-gradient-to-br from-gold-400 to-gold-700 text-night-900 grid place-items-center mb-5"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 1 1-12 0c0-4.5 6-11 6-11Z"/></svg></div><h3 class="text-xl font-extrabold mb-2">الحمامات والمطابخ</h3><p class="text-sm leading-relaxed text-night-500 dark:text-sand-300/80">أطقم وخلاطات وإكسسوارات بلمسات عصرية.</p></div><div class="reveal card-hover rounded-3xl border border-gold-500/30 bg-white/80 dark:bg-night-700/70 p-7" data-delay="200"><div class="w-13 h-13 w-12 h-12 rounded-2xl bg-gradient-to-br from-gold-400 to-gold-700 text-night-900 grid place-items-center mb-5"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3M4.9 4.9l2.1 2.1m10 10 2.1 2.1M4.9 19.1l2.1-2.1m10-10 2.1-2.1"/></svg></div><h3 class="text-xl font-extrabold mb-2">المضخات والخزانات</h3><p class="text-sm leading-relaxed text-night-500 dark:text-sand-300/80">حلول مياه متكاملة للمنازل والمشاريع الزراعية.</p></div></div>
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
+      <div class="reveal card-hover group rounded-3xl overflow-hidden border border-gold-500/30 bg-white/80 dark:bg-night-700/70" data-delay="0">
+        <div class="relative overflow-hidden h-64">
+          <img src="https://image.qwenlm.ai/public_source/e9ddfe13-d230-4773-88b2-02be599ce0af/1ad27806c-79c3-41f0-a957-cc9455608a52.png" alt="أنابيب نحاس و PPR وملحومات" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+          <span class="absolute top-4 right-4 bg-gradient-to-l from-gold-600 to-gold-400 text-night-900 text-[11px] font-extrabold px-4 py-1.5 rounded-full shadow-gold-glow">جودة معتمدة</span>
+        </div>
+        <div class="p-6">
+          <p class="text-[11px] font-extrabold text-gold-600 dark:text-gold-400 tracking-wide">سباكة</p>
+          <h3 class="text-lg font-extrabold mt-1">أنابيب نحاس و PPR وملحومات</h3>
+          <p class="text-sm text-night-500 dark:text-sand-300/80 mt-2 leading-relaxed">أنابيب PN20 وتمديدات نحاس أصفر بمواصفات عالمية.</p>
+          <div class="mt-5 flex items-center justify-between gap-3">
+            <span class="text-lg font-black gold-text whitespace-nowrap">من 18 ر.س</span>
+            <a href="index.html#contact" class="btn-shine text-xs font-extrabold text-night-900 bg-gradient-to-l from-gold-600 to-gold-400 px-5 py-2.5 rounded-full hover:brightness-110 transition whitespace-nowrap">اطلب الآن</a>
+          </div>
+        </div>
+      </div>
+      <div class="reveal card-hover group rounded-3xl overflow-hidden border border-gold-500/30 bg-white/80 dark:bg-night-700/70" data-delay="100">
+        <div class="relative overflow-hidden h-64">
+          <img src="https://image.qwenlm.ai/public_source/e9ddfe13-d230-4773-88b2-02be599ce0af/135c8e9f2-05da-486b-adda-e37c64addcad.png" alt="خلاطات كروم فاخرة" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+          <span class="absolute top-4 right-4 bg-gradient-to-l from-gold-600 to-gold-400 text-night-900 text-[11px] font-extrabold px-4 py-1.5 rounded-full shadow-gold-glow">ضمان 5 سنوات</span>
+        </div>
+        <div class="p-6">
+          <p class="text-[11px] font-extrabold text-gold-600 dark:text-gold-400 tracking-wide">حمامات ومطابخ</p>
+          <h3 class="text-lg font-extrabold mt-1">خلاطات كروم فاخرة</h3>
+          <p class="text-sm text-night-500 dark:text-sand-300/80 mt-2 leading-relaxed">خلاطات مغاسل ودش بلمعان كروم وضمان 5 سنوات.</p>
+          <div class="mt-5 flex items-center justify-between gap-3">
+            <span class="text-lg font-black gold-text whitespace-nowrap">320 ر.س</span>
+            <a href="index.html#contact" class="btn-shine text-xs font-extrabold text-night-900 bg-gradient-to-l from-gold-600 to-gold-400 px-5 py-2.5 rounded-full hover:brightness-110 transition whitespace-nowrap">اطلب الآن</a>
+          </div>
+        </div>
+      </div>
+      <div class="reveal card-hover group rounded-3xl overflow-hidden border border-gold-500/30 bg-white/80 dark:bg-night-700/70" data-delay="200">
+        <div class="relative overflow-hidden h-64">
+          <img src="https://image.qwenlm.ai/public_source/e9ddfe13-d230-4773-88b2-02be599ce0af/174563ea9-757e-4818-ae98-4ce517217fe5.png" alt="كابلات وأسلاك نحاس معتمدة" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+          <span class="absolute top-4 right-4 bg-gradient-to-l from-gold-600 to-gold-400 text-night-900 text-[11px] font-extrabold px-4 py-1.5 rounded-full shadow-gold-glow">مطابق SASO</span>
+        </div>
+        <div class="p-6">
+          <p class="text-[11px] font-extrabold text-gold-600 dark:text-gold-400 tracking-wide">كهرباء</p>
+          <h3 class="text-lg font-extrabold mt-1">كابلات وأسلاك نحاس معتمدة</h3>
+          <p class="text-sm text-night-500 dark:text-sand-300/80 mt-2 leading-relaxed">لفات كابلات بمقاسات متعددة مع قواطع 32A و63A.</p>
+          <div class="mt-5 flex items-center justify-between gap-3">
+            <span class="text-lg font-black gold-text whitespace-nowrap">260 ر.س</span>
+            <a href="index.html#contact" class="btn-shine text-xs font-extrabold text-night-900 bg-gradient-to-l from-gold-600 to-gold-400 px-5 py-2.5 rounded-full hover:brightness-110 transition whitespace-nowrap">اطلب الآن</a>
+          </div>
+        </div>
+      </div>
+      <div class="reveal card-hover group rounded-3xl overflow-hidden border border-gold-500/30 bg-white/80 dark:bg-night-700/70" data-delay="0">
+        <div class="relative overflow-hidden h-64">
+          <img src="https://image.qwenlm.ai/public_source/e9ddfe13-d230-4773-88b2-02be599ce0af/1b970d2cf-f77b-45ba-86bc-2a494f896271.png" alt="مفاتيح وأفياش بلمسة ذهبية" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+          <span class="absolute top-4 right-4 bg-gradient-to-l from-gold-600 to-gold-400 text-night-900 text-[11px] font-extrabold px-4 py-1.5 rounded-full shadow-gold-glow">الأكثر طلباً</span>
+        </div>
+        <div class="p-6">
+          <p class="text-[11px] font-extrabold text-gold-600 dark:text-gold-400 tracking-wide">كهرباء</p>
+          <h3 class="text-lg font-extrabold mt-1">مفاتيح وأفياش بلمسة ذهبية</h3>
+          <p class="text-sm text-night-500 dark:text-sand-300/80 mt-2 leading-relaxed">تشطيبات فاخرة بيضاء وذهبية لجميع الجدران.</p>
+          <div class="mt-5 flex items-center justify-between gap-3">
+            <span class="text-lg font-black gold-text whitespace-nowrap">45 ر.س</span>
+            <a href="index.html#contact" class="btn-shine text-xs font-extrabold text-night-900 bg-gradient-to-l from-gold-600 to-gold-400 px-5 py-2.5 rounded-full hover:brightness-110 transition whitespace-nowrap">اطلب الآن</a>
+          </div>
+        </div>
+      </div>
+      <div class="reveal card-hover group rounded-3xl overflow-hidden border border-gold-500/30 bg-white/80 dark:bg-night-700/70" data-delay="100">
+        <div class="relative overflow-hidden h-64">
+          <img src="https://image.qwenlm.ai/public_source/e9ddfe13-d230-4773-88b2-02be599ce0af/1710180ea-6bf8-42fb-8f80-519591d0d162.png" alt="إنارة LED وثريات كريستال" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+          <span class="absolute top-4 right-4 bg-gradient-to-l from-gold-600 to-gold-400 text-night-900 text-[11px] font-extrabold px-4 py-1.5 rounded-full shadow-gold-glow">تشكيلة واسعة</span>
+        </div>
+        <div class="p-6">
+          <p class="text-[11px] font-extrabold text-gold-600 dark:text-gold-400 tracking-wide">إنارة</p>
+          <h3 class="text-lg font-extrabold mt-1">إنارة LED وثريات كريستال</h3>
+          <p class="text-sm text-night-500 dark:text-sand-300/80 mt-2 leading-relaxed">سبوتات وداون لايت وثريات كريستال فاخرة موفرة.</p>
+          <div class="mt-5 flex items-center justify-between gap-3">
+            <span class="text-lg font-black gold-text whitespace-nowrap">من 89 ر.س</span>
+            <a href="index.html#contact" class="btn-shine text-xs font-extrabold text-night-900 bg-gradient-to-l from-gold-600 to-gold-400 px-5 py-2.5 rounded-full hover:brightness-110 transition whitespace-nowrap">اطلب الآن</a>
+          </div>
+        </div>
+      </div>
+      <div class="reveal card-hover group rounded-3xl overflow-hidden border border-gold-500/30 bg-white/80 dark:bg-night-700/70" data-delay="200">
+        <div class="relative overflow-hidden h-64">
+          <img src="https://image.qwenlm.ai/public_source/e9ddfe13-d230-4773-88b2-02be599ce0af/1b58ff177-347a-4ec8-9444-07467283c88d.png" alt="عدة كهربائية احترافية" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+          <span class="absolute top-4 right-4 bg-gradient-to-l from-gold-600 to-gold-400 text-night-900 text-[11px] font-extrabold px-4 py-1.5 rounded-full shadow-gold-glow">طقم كامل</span>
+        </div>
+        <div class="p-6">
+          <p class="text-[11px] font-extrabold text-gold-600 dark:text-gold-400 tracking-wide">عدد وأدوات</p>
+          <h3 class="text-lg font-extrabold mt-1">عدة كهربائية احترافية</h3>
+          <p class="text-sm text-night-500 dark:text-sand-300/80 mt-2 leading-relaxed">دريل لاسلكي مع طقم مفاتيح وعدد كاملة للفني المحترف.</p>
+          <div class="mt-5 flex items-center justify-between gap-3">
+            <span class="text-lg font-black gold-text whitespace-nowrap">499 ر.س</span>
+            <a href="index.html#contact" class="btn-shine text-xs font-extrabold text-night-900 bg-gradient-to-l from-gold-600 to-gold-400 px-5 py-2.5 rounded-full hover:brightness-110 transition whitespace-nowrap">اطلب الآن</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
