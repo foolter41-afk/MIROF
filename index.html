@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ميروف القابضة | MIROF HOLDING</title>
+<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/foolter41-afk/MIROF/main/assets/logo-dark.png">
 <meta name="description" content="ميروف القابضة — شركة سعودية قابضة تعمل عبر ستة قطاعات حيوية: التجارة والتجزئة، العقارات، اللوجستية، المقاولات والنظافة، الاستثمار، والتقنية.">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/cairo@5/index.css">
 <script src="https://cdn.tailwindcss.com"></script>
@@ -24,7 +25,7 @@ tailwind.config = { darkMode: 'class', theme: { extend: {
   html:not(.dark) ::-webkit-scrollbar-track{background:#F5F0E4}
   .gold-text{background:linear-gradient(115deg,#F5E9C9 0%,#D4B257 30%,#8A6A2F 55%,#F0D98C 80%,#C8A24B 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
   .dark .gold-text{filter:drop-shadow(0 2px 12px rgba(200,162,75,.25))}
-  .logo-dark{mix-blend-mode:screen}.logo-light{mix-blend-mode:multiply}
+  .logo-dark,.logo-light{mix-blend-mode:normal}
   .reveal{opacity:0;transform:translateY(46px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)}
   .reveal.visible{opacity:1;transform:none}
   .btn-shine{position:relative;overflow:hidden}
@@ -60,15 +61,15 @@ tailwind.config = { darkMode: 'class', theme: { extend: {
 </head>
 <body class="font-cairo bg-sand-50 text-night-700 dark:bg-night-900 dark:text-sand-100 antialiased overflow-x-hidden transition-colors duration-500">
 <div id="loader" class="fixed inset-0 z-[100] bg-night-900 flex flex-col items-center justify-center gap-6">
-  <img src="https://image.qwenlm.ai/public_source/e9ddfe13-d230-4773-88b2-02be599ce0af/1e80fb1de-9f9b-4cc3-bce6-51b4aac0bf52.png" alt="MIROF" class="logo-dark w-56 md:w-72 float-slow">
+  <img src="https://raw.githubusercontent.com/foolter41-afk/MIROF/main/assets/logo-dark.png" alt="MIROF" class="logo-dark w-56 md:w-72 float-slow">
   <div class="w-52 h-[3px] bg-night-600 rounded-full overflow-hidden"><div class="loader-bar h-full bg-gradient-to-l from-gold-300 to-gold-600 rounded-full"></div></div>
   <p class="text-gold-400 text-sm tracking-widest">MIROF HOLDING</p>
 </div>
 <header id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-500 bg-sand-50/80 dark:bg-night-900/70 backdrop-blur-xl border-b border-transparent">
   <div class="max-w-[1400px] mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-4">
     <a href="#home" class="flex items-center shrink-0" aria-label="ميروف القابضة">
-      <img src="https://image.qwenlm.ai/public_source/e9ddfe13-d230-4773-88b2-02be599ce0af/1e80fb1de-9f9b-4cc3-bce6-51b4aac0bf52.png" alt="ميروف القابضة" class="logo-dark hidden dark:block h-14 md:h-16 w-auto">
-      <img src="https://image.qwenlm.ai/public_source/e9ddfe13-d230-4773-88b2-02be599ce0af/1231faa2e-fd54-4aa6-8c38-b9779ce04801.png" alt="ميروف القابضة" class="logo-light dark:hidden h-14 md:h-16 w-auto">
+      <img src="https://raw.githubusercontent.com/foolter41-afk/MIROF/main/assets/logo-dark.png" alt="ميروف القابضة" class="logo-dark hidden dark:block h-14 md:h-16 w-auto">
+      <img src="https://raw.githubusercontent.com/foolter41-afk/MIROF/main/assets/logo-light.png" alt="ميروف القابضة" class="logo-light dark:hidden h-14 md:h-16 w-auto">
     </a>
     <nav class="hidden xl:flex items-center gap-6 text-[13.5px] font-semibold text-night-600 dark:text-sand-200">
       <a href="#about" class="nav-link hover:text-gold-600 dark:hover:text-gold-400 transition-colors">من نحن</a>
@@ -93,7 +94,7 @@ tailwind.config = { darkMode: 'class', theme: { extend: {
 </header>
 <div id="mobileMenu" class="fixed inset-0 z-[60] bg-night-900/95 backdrop-blur-2xl translate-x-full transition-transform duration-500 xl:hidden flex flex-col">
   <div class="h-20 px-6 flex items-center justify-between">
-    <img src="https://image.qwenlm.ai/public_source/e9ddfe13-d230-4773-88b2-02be599ce0af/1e80fb1de-9f9b-4cc3-bce6-51b4aac0bf52.png" alt="MIROF" class="logo-dark h-14">
+    <img src="https://raw.githubusercontent.com/foolter41-afk/MIROF/main/assets/logo-dark.png" alt="MIROF" class="logo-dark h-14">
     <button id="closeMenu" aria-label="إغلاق" class="w-11 h-11 rounded-full border border-gold-500/50 text-gold-400 grid place-items-center"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
   </div>
   <nav class="flex-1 overflow-y-auto px-8 py-6 flex flex-col gap-1 text-lg font-bold text-sand-100">
@@ -158,8 +159,8 @@ tailwind.config = { darkMode: 'class', theme: { extend: {
       <div class="reveal relative" data-delay="150">
         <div class="absolute inset-0 grid place-items-center pointer-events-none"><div class="spin-slower w-[420px] h-[420px] rounded-full border border-dashed border-gold-500/40"></div></div>
         <div class="relative rounded-3xl border border-gold-500/40 bg-gradient-to-br from-white/80 to-sand-100 dark:from-night-800 dark:to-night-700 p-10 md:p-14 shadow-card text-center">
-          <img src="https://image.qwenlm.ai/public_source/e9ddfe13-d230-4773-88b2-02be599ce0af/1e80fb1de-9f9b-4cc3-bce6-51b4aac0bf52.png" alt="شعار ميروف" class="logo-dark hidden dark:block w-64 mx-auto float-slow">
-          <img src="https://image.qwenlm.ai/public_source/e9ddfe13-d230-4773-88b2-02be599ce0af/1231faa2e-fd54-4aa6-8c38-b9779ce04801.png" alt="شعار ميروف" class="logo-light dark:hidden w-64 mx-auto float-slow">
+          <img src="https://raw.githubusercontent.com/foolter41-afk/MIROF/main/assets/logo-dark.png" alt="شعار ميروف" class="logo-dark hidden dark:block w-64 mx-auto float-slow">
+          <img src="https://raw.githubusercontent.com/foolter41-afk/MIROF/main/assets/logo-light.png" alt="شعار ميروف" class="logo-light dark:hidden w-64 mx-auto float-slow">
           <p class="mt-6 text-night-500 dark:text-sand-300/80 leading-relaxed text-sm md:text-base">«نؤمن أن النجاح الحقيقي يُقاس بالأثر؛ أثرٌ في الاقتصاد، وأثرٌ في الإنسان، وأثرٌ في المكان.»</p>
           <div class="mt-6 h-[2px] w-24 mx-auto bg-gradient-to-l from-transparent via-gold-500 to-transparent"></div>
           <p class="mt-4 text-gold-600 dark:text-gold-400 font-extrabold text-sm tracking-widest">MIROF HOLDING</p>
@@ -345,7 +346,7 @@ tailwind.config = { darkMode: 'class', theme: { extend: {
 <footer class="bg-night-900 text-sand-200 border-t border-gold-500/20">
   <div class="max-w-[1400px] mx-auto px-6 lg:px-10 py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-12">
     <div>
-      <img src="https://image.qwenlm.ai/public_source/e9ddfe13-d230-4773-88b2-02be599ce0af/1e80fb1de-9f9b-4cc3-bce6-51b4aac0bf52.png" alt="ميروف القابضة" class="logo-dark w-52">
+      <img src="https://raw.githubusercontent.com/foolter41-afk/MIROF/main/assets/logo-dark.png" alt="ميروف القابضة" class="logo-dark w-52">
       <p class="mt-5 text-sm leading-relaxed text-sand-300/70">شركة سعودية قابضة تبني منظومة أعمال متكاملة عبر ستة قطاعات استراتيجية، لتصنع قيمة مستدامة وأثراً يمتد.</p>
       <div class="mt-6 flex items-center gap-3">
         <a href="#" aria-label="X" class="w-10 h-10 rounded-full border border-gold-500/40 text-gold-400 grid place-items-center hover:bg-gold-500 hover:text-night-900 transition"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.9 2H22l-6.8 7.8L23.3 22h-6.3l-4.9-6.4L6.5 22H3.4l7.3-8.3L1 2h6.4l4.4 5.9L18.9 2Zm-1.1 18h1.7L7 3.9H5.2L17.8 20Z"/></svg></a>
