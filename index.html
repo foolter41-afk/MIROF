@@ -17,7 +17,6 @@ tailwind.config = { darkMode: 'class', theme: { extend: {
   boxShadow: { 'gold-glow': '0 0 40px -8px rgba(200,162,75,.45)', 'card': '0 20px 50px -20px rgba(4,6,11,.35)' }
 } } }
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <style>
   ::selection{background:#C8A24B;color:#05070D}
   ::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:#0A0F1C}
@@ -57,6 +56,9 @@ tailwind.config = { darkMode: 'class', theme: { extend: {
   @keyframes loaderBar{from{width:0}to{width:100%}}.loader-bar{animation:loaderBar 1.6s ease forwards}
   .hero-vignette{background:radial-gradient(ellipse at center,transparent 40%,rgba(5,7,13,.55) 100%)}
   html:not(.dark) .hero-vignette{background:radial-gradient(ellipse at center,transparent 45%,rgba(245,240,228,.65) 100%)}
+  @keyframes kenburns{0%{transform:scale(1)}100%{transform:scale(1.14)}}
+  .kenburns{animation:kenburns 24s ease-in-out infinite alternate}
+  @keyframes floatP{0%,100%{transform:translateY(0)}50%{transform:translateY(-36px)}}
 </style>
 </head>
 <body class="font-cairo bg-sand-50 text-night-700 dark:bg-night-900 dark:text-sand-100 antialiased overflow-x-hidden transition-colors duration-500">
@@ -111,22 +113,28 @@ tailwind.config = { darkMode: 'class', theme: { extend: {
   </nav>
 </div>
 <section id="home" class="relative min-h-screen flex items-center overflow-hidden">
-  <div id="heroCanvas" class="absolute inset-0 z-0"></div>
+  <div id="hero3d" class="absolute -inset-8 z-0 will-change-transform">
+    <img src="https://raw.githubusercontent.com/foolter41-afk/MIROF/main/assets/hero-poster.jpg" alt="ميروف القابضة — منظومة قطاعات متكاملة" class="kenburns absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 bg-night-900/40"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-night-900 via-night-900/10 to-night-900/60"></div>
+    <div class="absolute inset-0 bg-gradient-to-l from-night-900/70 via-transparent to-night-900/30"></div>
+  </div>
+  <div class="hero-particles absolute inset-0 z-[1] pointer-events-none" aria-hidden="true"></div>
   <div class="hero-vignette absolute inset-0 z-[1] pointer-events-none"></div>
-  <span class="hidden lg:block absolute left-6 top-1/2 -translate-y-1/2 z-[2] text-night-500/40 dark:text-sand-200/20 tracking-[.6em] text-xs font-bold [writing-mode:vertical-rl] rotate-180 select-none">MIROF HOLDING — SAUDI ARABIA</span>
+  <span class="hidden lg:block absolute left-6 top-1/2 -translate-y-1/2 z-[2] text-sand-200/25 tracking-[.6em] text-xs font-bold [writing-mode:vertical-rl] rotate-180 select-none">MIROF HOLDING — SAUDI ARABIA</span>
   <div class="relative z-[2] max-w-[1400px] mx-auto px-6 lg:px-10 pt-32 pb-24 w-full">
     <div class="max-w-3xl mx-auto text-center lg:mx-0 lg:text-right">
-      <span class="reveal inline-flex items-center gap-2 border border-gold-500/60 text-gold-600 dark:text-gold-300 rounded-full px-5 py-2 text-sm font-bold bg-white/40 dark:bg-night-800/40 backdrop-blur"><span class="w-2 h-2 rounded-full bg-gold-500 pulse-ring"></span>شركة سعودية قابضة</span>
+      <span class="reveal inline-flex items-center gap-2 border border-gold-500/60 text-gold-300 rounded-full px-5 py-2 text-sm font-bold bg-white/40 dark:bg-night-800/40 backdrop-blur"><span class="w-2 h-2 rounded-full bg-gold-500 pulse-ring"></span>شركة سعودية قابضة</span>
       <h1 class="reveal mt-6 text-5xl md:text-7xl xl:text-8xl font-black leading-[1.15]" data-delay="120">مجموعة <span class="gold-text">ميروف</span> القابضة</h1>
-      <p class="reveal mt-6 text-lg md:text-2xl font-semibold text-night-600 dark:text-sand-200" data-delay="240">نبني المستقبل بمنظومة استثمارية متكاملة تمتد عبر ستة قطاعات حيوية، <span class="text-gold-600 dark:text-gold-400">من قلب المملكة إلى آفاق العالم.</span></p>
-      <p class="reveal mt-4 text-base md:text-lg text-night-500 dark:text-sand-300/80 leading-relaxed" data-delay="340">شريككم الموثوق في التجارة والتجزئة، العقارات، اللوجستية، المقاولات والنظافة، الاستثمار والتقنية — بجودة عالمية وهوية سعودية أصيلة.</p>
+      <p class="reveal mt-6 text-lg md:text-2xl font-semibold text-sand-100" data-delay="240">نبني المستقبل بمنظومة استثمارية متكاملة تمتد عبر ستة قطاعات حيوية، <span class="text-gold-300">من قلب المملكة إلى آفاق العالم.</span></p>
+      <p class="reveal mt-4 text-base md:text-lg text-sand-200/85 leading-relaxed" data-delay="340">شريككم الموثوق في التجارة والتجزئة، العقارات، اللوجستية، المقاولات والنظافة، الاستثمار والتقنية — بجودة عالمية وهوية سعودية أصيلة.</p>
       <div class="reveal mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-4" data-delay="440">
         <a href="#industries" class="btn-shine inline-flex items-center gap-2 bg-gradient-to-l from-gold-600 via-gold-400 to-gold-500 text-night-900 font-extrabold px-9 py-4 rounded-full shadow-gold-glow hover:brightness-110 hover:-translate-y-1 transition-all duration-300">اكتشف قطاعاتنا <svg class="w-5 h-5 rotate-180" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
-        <a href="#contact" class="inline-flex items-center gap-2 border-2 border-gold-500/70 text-gold-700 dark:text-gold-300 font-extrabold px-9 py-4 rounded-full hover:bg-gold-500 hover:text-night-900 hover:-translate-y-1 transition-all duration-300">تواصل معنا</a>
+        <a href="#contact" class="inline-flex items-center gap-2 border-2 border-gold-500/70 text-gold-300 font-extrabold px-9 py-4 rounded-full hover:bg-gold-500 hover:text-night-900 hover:-translate-y-1 transition-all duration-300">تواصل معنا</a>
       </div>
     </div>
   </div>
-  <a href="#about" aria-label="انتقل للأسفل" class="absolute bottom-7 left-1/2 -translate-x-1/2 z-[2] flex flex-col items-center gap-2 text-gold-600 dark:text-gold-400"><span class="text-[11px] font-bold tracking-widest">اكتشف المزيد</span><span class="w-6 h-10 rounded-full border-2 border-current flex justify-center pt-2"><span class="scroll-dot w-1.5 h-1.5 rounded-full bg-current"></span></span></a>
+  <a href="#about" aria-label="انتقل للأسفل" class="absolute bottom-7 left-1/2 -translate-x-1/2 z-[2] flex flex-col items-center gap-2 text-gold-300"><span class="text-[11px] font-bold tracking-widest">اكتشف المزيد</span><span class="w-6 h-10 rounded-full border-2 border-current flex justify-center pt-2"><span class="scroll-dot w-1.5 h-1.5 rounded-full bg-current"></span></span></a>
 </section>
 <div class="ticker bg-gradient-to-l from-gold-600 via-gold-400 to-gold-600 text-night-900 py-3 border-y border-night-900/20" dir="ltr">
   <div class="ticker-track font-extrabold text-sm md:text-base">
@@ -439,83 +447,31 @@ document.getElementById('contactForm').addEventListener('submit', function(evSub
 });
 document.getElementById('yearNow').textContent = new Date().getFullYear();
 (function(){
-  const holderEl = document.getElementById('heroCanvas');
-  if(!holderEl || typeof THREE === 'undefined') return;
-  const heroScene = new THREE.Scene();
-  const isDarkNow = rootEl.classList.contains('dark');
-  heroScene.fog = new THREE.FogExp2(isDarkNow ? 0x05070d : 0xf5f1e8, 0.048);
-  const heroCamera = new THREE.PerspectiveCamera(55, holderEl.clientWidth / holderEl.clientHeight, 0.1, 100);
-  heroCamera.position.set(0, 0, window.innerWidth < 768 ? 13 : 10);
-  const heroRenderer = new THREE.WebGLRenderer({antialias:true, alpha:true});
-  heroRenderer.setSize(holderEl.clientWidth, holderEl.clientHeight);
-  heroRenderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-  holderEl.appendChild(heroRenderer.domElement);
-  const ambientHero = new THREE.AmbientLight(0x8899bb, isDarkNow ? 0.5 : 0.9); heroScene.add(ambientHero);
-  const keyHero = new THREE.PointLight(0xd4af37, 1.5, 80); keyHero.position.set(6,6,6); heroScene.add(keyHero);
-  const rimHero = new THREE.PointLight(0x3355aa, 0.9, 80); rimHero.position.set(-6,-4,-6); heroScene.add(rimHero);
-  const fillHero = new THREE.PointLight(0xffffff, 0.4, 80); fillHero.position.set(0,0,9); heroScene.add(fillHero);
-  const goldKnot = new THREE.Mesh(new THREE.TorusKnotGeometry(1.7, 0.42, 240, 28), new THREE.MeshStandardMaterial({color:0xc8a24b, metalness:0.95, roughness:0.22, emissive:0x2a1d05, emissiveIntensity:0.4}));
-  heroScene.add(goldKnot);
-  const wireShell = new THREE.Mesh(new THREE.IcosahedronGeometry(3.7, 1), new THREE.MeshBasicMaterial({color:0xd4af37, wireframe:true, transparent:true, opacity:0.09}));
-  heroScene.add(wireShell);
-  const ringMatA = new THREE.MeshBasicMaterial({color:0xd4af37, transparent:true, opacity:0.22, side:THREE.DoubleSide});
-  const heroRingA = new THREE.Mesh(new THREE.TorusGeometry(3.1, 0.015, 8, 140), ringMatA); heroRingA.rotation.x = Math.PI / 2.15; heroScene.add(heroRingA);
-  const heroRingB = new THREE.Mesh(new THREE.TorusGeometry(3.9, 0.01, 8, 140), ringMatA.clone()); heroRingB.rotation.x = Math.PI / 1.7; heroRingB.rotation.y = 0.5; heroScene.add(heroRingB);
-  const starCount = 1100; const starPositions = new Float32Array(starCount * 3);
-  for(let starIdx = 0; starIdx < starCount; starIdx++){
-    const radiusStar = 5 + Math.random() * 11; const thetaStar = Math.random() * Math.PI * 2; const phiStar = Math.acos(2 * Math.random() - 1);
-    starPositions[starIdx*3] = radiusStar * Math.sin(phiStar) * Math.cos(thetaStar);
-    starPositions[starIdx*3+1] = radiusStar * Math.sin(phiStar) * Math.sin(thetaStar);
-    starPositions[starIdx*3+2] = radiusStar * Math.cos(phiStar);
+  const layer3d = document.getElementById('hero3d');
+  const heroSec = document.getElementById('home');
+  if(!layer3d || !heroSec) return;
+  let tX = 0, tY = 0, cX = 0, cY = 0;
+  heroSec.addEventListener('mousemove', function(evM){
+    const rect = heroSec.getBoundingClientRect();
+    tX = ((evM.clientX - rect.left) / rect.width - 0.5) * 2;
+    tY = ((evM.clientY - rect.top) / rect.height - 0.5) * 2;
+  }, {passive:true});
+  heroSec.addEventListener('mouseleave', function(){ tX = 0; tY = 0; });
+  function tiltLoop(){
+    cX += (tX - cX) * 0.06; cY += (tY - cY) * 0.06;
+    layer3d.style.transform = 'perspective(1400px) rotateY(' + (cX * 3.2).toFixed(3) + 'deg) rotateX(' + (-cY * 3.2).toFixed(3) + 'deg) scale(1.07)';
+    requestAnimationFrame(tiltLoop);
   }
-  const starGeo = new THREE.BufferGeometry(); starGeo.setAttribute('position', new THREE.BufferAttribute(starPositions, 3));
-  const starMat = new THREE.PointsMaterial({color:0xd9b25f, size:0.05, transparent:true, opacity:0.85, blending:THREE.AdditiveBlending, depthWrite:false});
-  const starField = new THREE.Points(starGeo, starMat); heroScene.add(starField);
-  const orbitGroup = new THREE.Group(); const orbitData = [];
-  for(let octIdx = 0; octIdx < 10; octIdx++){
-    const octMesh = new THREE.Mesh(new THREE.OctahedronGeometry(0.16 + Math.random()*0.12), new THREE.MeshStandardMaterial({color:0xd4b257, metalness:0.9, roughness:0.3}));
-    orbitData.push({mesh:octMesh, radius:4.6 + Math.random()*1.8, speed:0.15 + Math.random()*0.3, offset:Math.random()*Math.PI*2, yLevel:(Math.random()-0.5)*4});
-    orbitGroup.add(octMesh);
-  }
-  heroScene.add(orbitGroup);
-  heroThemeUpdate = function(isDarkMode){
-    heroScene.fog.color.set(isDarkMode ? 0x05070d : 0xf5f1e8);
-    ambientHero.intensity = isDarkMode ? 0.5 : 0.95;
-    starMat.blending = isDarkMode ? THREE.AdditiveBlending : THREE.NormalBlending;
-    starMat.opacity = isDarkMode ? 0.85 : 0.5;
-    starMat.color.set(isDarkMode ? 0xd9b25f : 0x8a6a2f);
-    starMat.needsUpdate = true;
-  };
-  let mouseX = 0, mouseY = 0;
-  window.addEventListener('mousemove', function(evMouse){ mouseX = (evMouse.clientX / window.innerWidth) * 2 - 1; mouseY = (evMouse.clientY / window.innerHeight) * 2 - 1; }, {passive:true});
-  window.addEventListener('resize', function(){
-    const wVal = holderEl.clientWidth, hVal = holderEl.clientHeight;
-    heroCamera.aspect = wVal / hVal; heroCamera.updateProjectionMatrix();
-    heroRenderer.setSize(wVal, hVal);
-    heroCamera.position.z = window.innerWidth < 768 ? 13 : 10;
-  });
-  let heroVisible = true;
-  new IntersectionObserver(function(entries){ heroVisible = entries[0].isIntersecting; }, {threshold:0}).observe(holderEl);
-  const heroClock = new THREE.Clock();
-  function heroAnimate(){
-    requestAnimationFrame(heroAnimate);
-    if(!heroVisible || document.hidden) return;
-    const tVal = heroClock.getElapsedTime();
-    goldKnot.rotation.x = tVal * 0.22; goldKnot.rotation.y = tVal * 0.3; goldKnot.position.y = Math.sin(tVal * 0.8) * 0.15;
-    wireShell.rotation.y = -tVal * 0.08; wireShell.rotation.z = tVal * 0.05;
-    heroRingA.rotation.z = tVal * 0.25; heroRingB.rotation.z = -tVal * 0.18;
-    starField.rotation.y = tVal * 0.02;
-    for(let odIdx = 0; odIdx < orbitData.length; odIdx++){
-      const odItem = orbitData[odIdx]; const angVal = tVal * odItem.speed + odItem.offset;
-      odItem.mesh.position.set(Math.cos(angVal) * odItem.radius, odItem.yLevel + Math.sin(tVal + odItem.offset) * 0.4, Math.sin(angVal) * odItem.radius);
-      odItem.mesh.rotation.x += 0.01; odItem.mesh.rotation.y += 0.014;
+  tiltLoop();
+  const pWrap = document.querySelector('.hero-particles');
+  if(pWrap){
+    for(let pIdx = 0; pIdx < 26; pIdx++){
+      const dot = document.createElement('span');
+      const sizeVal = 2 + Math.random() * 4;
+      dot.style.cssText = 'position:absolute;border-radius:9999px;background:#D4B257;opacity:' + (0.25 + Math.random()*0.45).toFixed(2) + ';width:' + sizeVal + 'px;height:' + sizeVal + 'px;left:' + (Math.random()*100).toFixed(1) + '%;top:' + (Math.random()*100).toFixed(1) + '%;box-shadow:0 0 ' + (8 + sizeVal*2) + 'px rgba(212,178,87,.8);animation:floatP ' + (6 + Math.random()*8).toFixed(1) + 's ease-in-out ' + (Math.random()*5).toFixed(1) + 's infinite;';
+      pWrap.appendChild(dot);
     }
-    heroCamera.position.x += (mouseX * 1.1 - heroCamera.position.x) * 0.04;
-    heroCamera.position.y += (-mouseY * 0.8 - heroCamera.position.y) * 0.04;
-    heroCamera.lookAt(0, 0, 0);
-    heroRenderer.render(heroScene, heroCamera);
   }
-  heroAnimate();
 })();
 </script>
 </body>
